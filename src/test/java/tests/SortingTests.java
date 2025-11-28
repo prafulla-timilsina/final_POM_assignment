@@ -21,7 +21,7 @@ public class SortingTests extends Base {
         InventoryPage inventory = new InventoryPage(driver);
         inventory.sortByNameDescending();
 
-        // Optional: Verify first product name is Z-A
+        // Verify first product name is Z-A
         List<WebElement> products = driver.findElements(By.className("inventory_item_name"));
         List<String> names = new ArrayList<>();
         for (WebElement p : products) {
@@ -39,7 +39,7 @@ public class SortingTests extends Base {
         InventoryPage inventory = new InventoryPage(driver);
         inventory.sortByPriceLowToHigh();
 
-        // Optional: Verify first product price is lowest
+        // Verify first product price is lowest
         List<WebElement> products = driver.findElements(By.className("inventory_item_price"));
         List<Double> prices = new ArrayList<>();
         for (WebElement p : products) {
